@@ -1,32 +1,31 @@
 # Hugo Visdot Theme
 
-> 一款现代简约风格的 [Hugo](https://gohugo.io) 主题。 
+> A modern minimalist style [Hugo](https://gohugo.io) theme
 
 [![Hugo](https://img.shields.io/badge/hugo-0.78-blue.svg)](https://gohugo.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-[English](README_EN.md) | [中文](README.md)
+[English](README.md) | [中文](README_CN.md)
 
-## 预览
+## Demo
 
-[Demo](http://demo.visdot.com)
+[Live Demo](http://demo.visdot.com)
 
-![screenshot](HugoVisdotTheme.jpg)
+![screenshot](images/screenshot.png)
 
-## 特性
+## Features
 
-- 白色简约风格
-- 基于 pace.js 的顶部加载进度条
-- 基于 fuse.js 的站内搜索
-- 项目展示页面
-- 支持原生的分类和标签系统
-- 支持移动设备访问
+- White minimalist style
+- Top loading progress bar based on pace.js
+- In-site search based on fuse.js
+- Project showcase page
+- Native support for category and tagging system
+- Support for mobile device access
 
-## 安装
+## Installation
 
 ```sh
 git clone https://github.com/leejiawang/hugo-themes-visdot.git themes/vd
 ```
-下载主题文件，将根目录中 `config.yaml` 中的主题项内容修改为 `vd`。
+Download theme files, then copy the config.yaml in the exampleSite to the root of your Hugo site.
 
-> 新用户推荐直接将 `exampleSite` 内的文件复制到站点根目录。 

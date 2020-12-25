@@ -1,0 +1,12 @@
+name = "Visdot"
+license = "MIT"
+licenselink = "https://github.com/leejiawang/hugo-visdot/blob/master/LICENSE.md"
+description = "A modern minimalist style hugo theme"
+homepage = "http://demo.visdot.com"
+tags = ["minimal", "blog", "project", "clean", "simple", "minimalist"]
+features = ["blog"]
+min_version = "0.70"
+
+[author]
+  name = "leejiawang"
+  homepage = "https://visdot.com"
