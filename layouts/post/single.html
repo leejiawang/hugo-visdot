@@ -1,0 +1,40 @@
+{{ partial "header.html" . }}
+{{ partial "mobile-sidebar-post.html" . }}
+<style type="text/css">
+	#NavPost {color: rgba(0,0,0,.7);font-weight: bold;}
+</style>
+<div class="container w-1150">
+	<div class="flex">
+		<div class="main">
+			<div class="post-meta">
+
+				<div class="post-title">{{ .Title | markdownify }}</div>
+				<div class="post-keywords">
+					<div class="post-terms">
+						{{ with .Params.Tags }}
+						{{ range . }}
+						<a class="keywords-btn" href="{{ "search" | absURL }}/{{ . | urlize }}">{{ . }}</a>
+						{{ end }}
+						{{ end }}
+					</div>
+				</div>
+
+
+				{{ if (gt .Params.date 0)}}
+				<div class="post-date">Published on {{ .Date.Format "20060102" }}, have {{ .WordCount}} Words.
+				</div>
+				{{ end }}
+			</div>
+			<main class="markdown academic w-630">
+				{{ .Content }}
+			</main>
+			{{ partial "pre-next.html" . }}
+		</div>
+		<div class="sidebar">
+			{{ partial "sidebar-img.html" . }}
+			{{ partial "outline.html" . }}
+		</div>
+
+	</div>
+</div>
+{{ partial "footer.html" . }}

@@ -1,0 +1,37 @@
+baseurl: "/"
+languageCode: "en-us"
+title: "Visdot"
+theme: "hugo-theme-visdot"
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+
+permalinks:
+  post:"/post/:slug"
+  projects:"/projects/:slug"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+taxonomies:
+  Categories: "categories"
+  Tags: "tags"
+
+pygmentsUseClasses: true
+hasCJKLanguage: true
+ 
+params:
+  siteLogo: /img/logo.png
+  keywords: visdot, hugo, theme
+  description: Your website's introduction
+  slogan: Your site's slogan.
+  copyright: 2020 Visdot
+  aboutLink: true
+  notice: This is a sample website with visdot theme.
+  

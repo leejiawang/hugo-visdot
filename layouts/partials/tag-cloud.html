@@ -1,0 +1,9 @@
+<div class="sidebar-items vd-element vd-b-bottom bg-w">
+	<div class="vd-l-title">Tag Cloud</div>
+   	<div class="keywords-terms">
+    {{ range .Site.Taxonomies.tags }}
+        <a id="{{ .Page.Title }}" class="keywords-btn" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    {{ end }}
+    </div>
+    <a class="vd-a" href="/post">More</a>
+</div>

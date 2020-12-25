@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+{{ partial "mobile-sidebar.html" . }}
+<style type="text/css">
+	#NavProjects {color: rgba(0,0,0,.7);font-weight: bold;}
+</style>
+<div class="container w-1150">
+<div class="gallery">
+	{{ range where .Site.RegularPages "Section" "projects" }}
+	<a href="{{ .RelPermalink }}"><li class="gallery-items">
+    <img src="{{ .Page.Params.figure }}">
+ 	<div class="gallery-title">{{ .Title | markdownify }}</div></a>
+	
+ 	<div class="gallery-desc">{{ .Page.Params.desc }}</div>
+	</li></a>
+    {{ end }}
+</div>
+</div>
+{{ partial "footer.html" . }}

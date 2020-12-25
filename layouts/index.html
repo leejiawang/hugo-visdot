@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+{{ partial "mobile-sidebar.html" . }}
+<style type="text/css">
+	#NavHome {color: rgba(0,0,0,.7);font-weight: bold;}
+</style>
+<img class="projects-img" src="/img/huidong_sea.jpg">
+<div class="container w-1150">
+	<div class="flex">
+		<div class="main">
+			{{ .Content }}
+			<ul class="post-list">
+				<div class="vd-title" align="center">{{ .Param "slogan" }}</div>
+				<hr>
+	   		{{ range where .Site.RegularPages "Section" "post" }}
+	        <a href="{{ .RelPermalink }}"><li>
+	        	<span class="list-date">{{ .Date.Format "20060102" }}</span>
+	         	{{ .Title | markdownify }}  	
+	        </li></a>
+		    {{ end }}
+	      	</ul>
+		</div>
+		{{ partial "sidebar.html" . }}
+	</div>
+</div>
+{{ partial "footer.html" . }}

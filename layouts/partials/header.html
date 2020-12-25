@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+　　 <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{if not .IsHome }}
+    <title>{{ .Title }} &nbsp;|&nbsp; {{ .Site.Title }}</title>
+    {{ with .Keywords }}
+    <meta name="keywords" content="{{ delimit . `, ` }}">
+    {{ end }}
+    <meta name="description" property="og:description" content="{{ .Description }}">
+    {{ end }}
+    {{if .IsHome }}
+    <title>{{ .Site.Title }}</title>
+    <meta name="keywords" content="{{ .Param "keywords" }}">
+    <meta name="description" content="{{ .Param "description" }}">
+    {{ end }}
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.jpg">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/highlight.css"/>
+  </head>
+  <body>
+    <div class="header-line"></div>
+    <div class="mobile-header bg-w">
+      <a class="meun-button-expand" one-link-mark="yes"></a>
+      <a class="site-logo" href="/">
+        <img src="{{ .Param "siteLogo" }}">
+      </a>
+    </div>
+    <header class="header vd-glass-w">
+      <div class="container w-1150">
+        <nav class="nav">
+          <a class="site-logo" href="/">
+            <img src="{{ .Param "siteLogo" }}">
+          </a>
+          <ul class="menu">
+            <li class="menu-button active">
+              <a id="NavHome" href="/">Home</a>
+            </li>
+            <li class="menu-button">
+              <a id="NavPost" href="/post">Posts</a>
+            </li>
+            <li class="menu-button">
+              <a id="NavProjects" href="/projects">Projects</a>
+            </li>
+          </ul>
+          <ul class="nav">      
+            <li id="fastSearch" >
+              <input id="searchInput" placeholder="Search…" tabindex="0" >
+              <ul id="searchResults"></ul>
+            </li>
+            <li class="nav-sub-button">
+              <a href="/index.xml">RSS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>

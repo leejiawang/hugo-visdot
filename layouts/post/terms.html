@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+{{ partial "mobile-sidebar.html" . }}
+<style type="text/css">
+  #NavPost {color: rgba(0,0,0,.7);font-weight: bold;}
+</style>
+<div class="container w-1150">
+<div class="flex">
+	<div class="main">
+        {{ partial "post-menu.html" . }}
+        <ul class="post-list">
+   		{{ range where .Site.RegularPages "Section" "article" }}
+	        <a href="{{ .RelPermalink }}"><li>
+	        	<span class="list-date">{{ .Date.Format "20060102" }}</span>
+	         	{{ .Title | markdownify }}  	
+	        </li></a>
+	        {{ end }}
+      	</ul>
+	</div>
+	{{ partial "terms-sidebar.html" . }}
+</div>
+</div>
+{{ partial "footer.html" . }}
+ 

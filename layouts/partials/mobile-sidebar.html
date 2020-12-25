@@ -1,0 +1,16 @@
+<div class="mobile-sidebar">
+  <div class="mobile-sidebar-inner">
+    <div class="mobile-nav">
+      <a class="mobile-nav-button" href="/">Home</a>
+      <a class="mobile-nav-button" href="/post">Posts</a>
+      <a class="mobile-nav-button" href="/projects">Projects</a>
+      <a class="mobile-nav-button" href="/about">About</a>
+  </div>
+  <div class="mobile-nav-title">Tag Cloud</div>
+    <ul class="keywords-terms">
+    {{ range .Site.Taxonomies.tags }}
+      <a class="keywords-btn" href="{{ .Page.Permalink }}">{{ .Page.Title }} <span class="list-count">{{ .Count }}</span></a>
+    {{ end }}
+    </ul>
+  </div>
+</div>

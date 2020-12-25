@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+{{ partial "mobile-sidebar.html" . }}
+<style type="text/css">
+	#NavProjects {color: rgba(0,0,0,.7);font-weight: bold;}
+</style>
+	<img class="projects-img" src="{{ .Page.Params.hfigure }}">
+<div class="container">
+	<div class="flex">
+		<div class="full-page">
+			<main class="markdown projects w-1012">
+				{{ .Content }}
+			</main>
+		</div>
+	</div>
+</div>
+{{ partial "footer.html" . }}

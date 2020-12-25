@@ -1,0 +1,14 @@
+<style type="text/css">
+	#{{ .Title }} {color: #fff;background-color: #2095FA;}
+	#NavPost {color: rgba(0,0,0,.7);font-weight: bold;}
+</style>
+
+<img class="vd-photo vd-mobile" src="/img/example.png" style="width: 100%;max-width: 400px;">
+
+<div class="space-nav">
+ <a id="Posts" class="space-btn" href="/post">All</a>
+{{ range .Site.Taxonomies.categories }}
+    <a id="{{ .Page.Title }}" class="space-btn" href="{{ .Page.Permalink }}">{{ .Page.Title }}<span class="list-count">{{ .Count }}</a>
+{{ end }}
+</div>
+<hr>

@@ -1,0 +1,8 @@
+    <div class="footer">
+      <span>Copyright &copy {{ with $.Param "copyright" }}{{ . | markdownify }}{{ else }}{{ .Site.Title }}</span>{{ end }} ｜ <span class="md-none">{{ if $.Param "aboutLink" }}<a href="/about">About</a>{{ end }} ｜ Powered by <a href="https://gohugo.io/">Hugo</a> and the <a href="https://github.com/leejiawang/hugo-theme-visdot">vd theme</a> ｜ </span></span><a href="javascript:scroll(0,0)">Top</a><svg t="1604653824882" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3895" width="20" height="20"><path d="M794.453333 350.72l-213.333333-170.666667a42.666667 42.666667 0 0 0-52.906667 0l-213.333333 170.666667a42.666667 42.666667 0 0 0 52.906667 66.56L512 302.08V682.666667a42.666667 42.666667 0 0 1-42.666667 42.666666H256a42.666667 42.666667 0 0 0 0 85.333334h213.333333a128 128 0 0 0 128-128V302.08l144.213334 115.2A42.666667 42.666667 0 0 0 768 426.666667a42.666667 42.666667 0 0 0 33.28-16.213334 42.666667 42.666667 0 0 0-6.826667-59.733333z" p-id="3896" fill="#8a8a8a"></path></svg>
+    </div>
+  </body>
+  {{ partial "js.html" . }}
+</html>
+
+

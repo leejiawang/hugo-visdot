@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+{{ partial "warehouse-mobile-sidebar.html" . }}
+<style type="text/css">
+	#NavWarehouse {color: rgba(0,0,0,.7);font-weight: bold;}
+</style>
+<div class="container">
+	<div class="flex w-1150">
+		<div class="left-sidebar">
+			<div class="vd-l-a vd-fixed doc-sidebar vd-maxh bg-w">
+				<div class="vd-docs-title"> {{ .Title|markdownify }}</div>
+				<div class="vd-l-title pt-25">大纲</div>
+				<div class="">
+					{{ .Page.TableOfContents }}
+				</div>
+			</div>
+
+		</div>
+		<div class="main">
+		<div class="markdown academic w-730">				
+			<div class="post-meta">
+				<div class="docs-title">{{ .Title | markdownify }}</div>
+				<span class="post-date">{{ if (gt .Params.date 0)}}Built in {{ .Date.Format "20060102" }}{{ end }}</span>
+			</div>
+			{{ .Content }}
+		</div>
+		</div>
+	</div>
+</div>
+{{ partial "footer-s.html" . }}
